@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORMS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="css/st"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <title>HOSPITAL BLOG</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: auto;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: auto;
+}
+
+/* Style the right column */
+.right {
+  grid-area:auto;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="grid-container">
+  <div class="header">
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Black with white text -->
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">...</nav> -->
+
+<!-- Blue with white text -->
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">...</nav> -->
+  </div>
+  
+  <div class="left" style="background-color:#aaa;">
+    <H6 style =" font-family: KRISTEN ITC">PLEASE FILL THE DATA</H6>
+    <BR>
+    <form method="post" action="lay.html">
+      <div class="form-group">
+        <div class="form-group">
+          <input type="text" name="fname" class="form-control" placeholder="ENTER FIRST NAME">
+        </div>
+        <div class="form-group">
+         <input type="address" name="address" class="form-control" placeholder="ENTER LOCATION"> 
+        </div>
+        <div class="form-group" >
+          <input type="number" name="card" class="form-control" placeholder="ENTER CARD NO"> 
+        </div>
+       <div class="form-group">
+         <input type="button" name="button" class="btn btn-primary form-control" value="SUBMIT" >
+       </div>
+      </div>
+    </form>
+  </div>
+  <div class="middle" style="background-color:#bbb;">
+    <h5 style="font-size:170%; font-family: KRISTEN ITC;">SERVICES ON THE BLOG</h5>
+    <Ul>
+   <a href="bones.com"><li style="font-family: verdana">ORTHOPEDIC CONSULTATION</li> </a> 
+   <a href="mentalawareness.com"> <li style="font-family: verdana">PSYCHIATRY SERVICES</li></a>  
+   <a href="healthyeating.com"> <LI style="font-family: verdana">EATING HEALTHY</LI></a>  
+   <a href="EXERCISE.com"><li style="font-family: verdana">EXERCISE DAILY</li></a>   
+   <a href="/"> <li style="font-family:verdana " >INFANT CONSULTATION</li></a>  
+    </Ul>
+    
+  </div>  
+  <div class="right" style="background-color:#ccc;">
+    <iframe width="500" height="200" src="https://www.youtube.com/embed/ptD9QTncr0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  
+  <div class="footer">
+  <span class="badge badge-pill badge-primary"><H4>THANK YOU FOR VISITING THE PAGE</H4></span>
+  </div>
+</div>
+
+</body>
+</html>
